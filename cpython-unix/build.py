@@ -64,7 +64,8 @@ def install_sccache(build_env):
     """
     candidates = [
         # Prefer a binary in the project itself.
-        ROOT / "sccache",
+        ROOT
+        / "sccache",
     ]
 
     # Look for sccache in $PATH, but only if the build environment
@@ -256,9 +257,10 @@ def simple_build(
         build_env.copy_file(SUPPORT / ("build-%s.sh" % entry))
 
         env = {
-            "%s_VERSION" % entry.upper().replace("-", "_").replace(".", "_"): DOWNLOADS[
-                entry
-            ]["version"],
+            "%s_VERSION"
+            % entry.upper()
+            .replace("-", "_")
+            .replace(".", "_"): DOWNLOADS[entry]["version"],
         }
 
         add_target_env(env, host_platform, target_triple, build_env)
@@ -859,10 +861,10 @@ def build_cpython(
 
         python_info["tcl_library_path"] = "install/lib"
         python_info["tcl_library_paths"] = [
-            "itcl4.2.2",
+            "itcl4.2.4",
             "tcl8",
             "tcl8.6",
-            "thread2.8.7",
+            "thread2.8.9",
             "tk8.6",
         ]
 
