@@ -32,6 +32,7 @@ CFLAGS="${CFLAGS}" CPPFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" ./configure \
     --prefix=/tools/deps \
     --with-tcl=${TOOLS_PATH}/deps/lib \
     --enable-shared=no \
+    --enable-64bit \
     --enable-threads \
     ${EXTRA_CONFIGURE_FLAGS}
 
