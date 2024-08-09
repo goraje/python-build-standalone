@@ -161,10 +161,10 @@ jobs:
           #   runner: macos-13
           #   py: 'cpython-3.11'
           #   optimizations: 'debug'
-          # - target_triple: 'x86_64-apple-darwin'
-          #   runner: macos-13
-          #   py: 'cpython-3.11'
-          #   optimizations: 'pgo'
+          - target_triple: 'x86_64-apple-darwin'
+            runner: macos-13
+            py: 'cpython-3.11'
+            optimizations: 'pgo'
           # - target_triple: 'x86_64-apple-darwin'
           #   runner: macos-13
           #   py: 'cpython-3.11'
