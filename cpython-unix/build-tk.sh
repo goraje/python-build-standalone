@@ -20,7 +20,7 @@ LDFLAGS="${EXTRA_TARGET_LDFLAGS}"
 if [ "${PYBUILD_PLATFORM}" = "macos" ]; then
     CFLAGS="${CFLAGS} -I${TOOLS_PATH}/deps/include -Wno-availability"
     CFLAGS="${CFLAGS} -Wno-deprecated-declarations -Wno-unknown-attributes -Wno-typedef-redefinition"
-    LDFLAGS="-ObjC -L${TOOLS_PATH}/deps/lib"
+    LDFLAGS="-L${TOOLS_PATH}/deps/lib"
     EXTRA_CONFIGURE_FLAGS="--enable-aqua=yes --without-x"
 else
     EXTRA_CONFIGURE_FLAGS="--x-includes=${TOOLS_PATH}/deps/include --x-libraries=${TOOLS_PATH}/deps/lib"
