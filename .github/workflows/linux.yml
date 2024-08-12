@@ -890,15 +890,15 @@ jobs:
 
           ./build-linux.py --target-triple ${{ matrix.build.target_triple }} --python ${{ matrix.build.py }} --optimizations ${{ matrix.build.optimizations }}
 
-      # - name: Validate Distribution
-      #   run: |
-      #     chmod +x build/pythonbuild
+      - name: Validate Distribution
+        run: |
+          chmod +x build/pythonbuild
 
-      #     if [ -n "${{matrix.build.run}}" ]; then
-      #       EXTRA_ARGS="--run"
-      #     fi
+          if [ -n "${{matrix.build.run}}" ]; then
+            EXTRA_ARGS="--run"
+          fi
 
-      #     build/pythonbuild validate-distribution ${EXTRA_ARGS} dist/*.tar.zst
+          build/pythonbuild validate-distribution ${EXTRA_ARGS} dist/*.tar.zst
 
       - name: Upload Distribution
         uses: actions/upload-artifact@v4

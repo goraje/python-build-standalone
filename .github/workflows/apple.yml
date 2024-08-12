@@ -220,14 +220,14 @@ jobs:
           name: ${{ matrix.build.py }}-${{ matrix.build.target_triple }}-${{ matrix.build.optimizations }}
           path: dist/*
 
-      # - uses: actions/checkout@v4
-      #   with:
-      #     repository: 'phracker/MacOSX-SDKs'
-      #     ref: master
-      #     path: macosx-sdks
+      - uses: actions/checkout@v4
+        with:
+          repository: 'phracker/MacOSX-SDKs'
+          ref: master
+          path: macosx-sdks
 
-      # - name: Validate Distribution
-      #   run: |
-      #     chmod +x build/pythonbuild
+      - name: Validate Distribution
+        run: |
+          chmod +x build/pythonbuild
 
-      #     build/pythonbuild validate-distribution --macos-sdks-path macosx-sdks --run dist/*.tar.zst
+          build/pythonbuild validate-distribution --macos-sdks-path macosx-sdks --run dist/*.tar.zst
