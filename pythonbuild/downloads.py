@@ -141,10 +141,10 @@ DOWNLOADS = {
         "version": "0.5",
     },
     "libX11": {
-        "url": "https://www.x.org/archive/individual/lib/libX11-1.6.12.tar.gz",
-        "size": 3168158,
-        "sha256": "0fce5fc0a24a3dc728174eccd0cb8d6a1b37a2ec1654bd5628c84e5bc200d594",
-        "version": "1.6.12",
+        "url": "https://www.x.org/archive/individual/lib/libX11-1.8.3.tar.gz",
+        "size": 3196019,
+        "sha256": "5a55945b7da86ce94733faf229342f75867e9c1090685f47f4d82b7f88602a14",
+        "version": "1.8.3",
         "library_names": ["X11", "X11-xcb"],
         "licenses": ["MIT", "X11"],
         "license_file": "LICENSE.libX11.txt",
@@ -161,10 +161,10 @@ DOWNLOADS = {
     # Newer versions of libxcb require a modern Python to build. We can take this
     # dependency once we feel like doing the work.
     "libxcb": {
-        "url": "https://xcb.freedesktop.org/dist/libxcb-1.14.tar.gz",
-        "size": 640322,
-        "sha256": "2c7fcddd1da34d9b238c9caeda20d3bd7486456fc50b3cc6567185dbd5b0ad02",
-        "version": "1.14",
+        "url": "https://xcb.freedesktop.org/dist/libxcb-1.16.1.tar.gz",
+        "size": 661668,
+        "sha256": "830c58758d814213e338fd1bb454be3787a7ef2aff9b9e4b721d9adef2662536",
+        "version": "1.16.1",
         "library_names": ["xcb"],
         "licenses": ["MIT"],
         "license_file": "LICENSE.libxcb.txt",
