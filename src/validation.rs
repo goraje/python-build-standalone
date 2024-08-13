@@ -119,7 +119,6 @@ const PE_ALLOWED_LIBRARIES: &[&str] = &[
     "libssl-1_1-x64.dll",
     "libssl-3.dll",
     "libssl-3-x64.dll",
-    "msvcrt.dll",
     "python3.dll",
     "python38.dll",
     "python39.dll",
@@ -129,7 +128,6 @@ const PE_ALLOWED_LIBRARIES: &[&str] = &[
     "sqlite3.dll",
     "tcl86t.dll",
     "tk86t.dll",
-    "zlib1.dll",
 ];
 
 static GLIBC_MAX_VERSION_BY_TRIPLE: Lazy<HashMap<&'static str, version_compare::Version<'static>>> =
